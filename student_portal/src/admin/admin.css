@@ -1,0 +1,764 @@
+/* =========================================================
+   Google Fonts
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* Sneat Admin Vendor & Core CSS */
+@import './assets/vendor/fonts/boxicons.css';
+@import './assets/vendor/css/core.css';
+@import './assets/vendor/css/theme-default.css';
+@import './assets/css/demo.css';
+@import './assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css';
+@import './assets/vendor/libs/apex-charts/apex-charts.css';
+
+
+/* =========================================================
+   MAIN LAYOUT
+   ========================================================= */
+
+.layout-wrapper.layout-content-navbar {
+    min-height: 100vh;
+    font-family: 'Public Sans',
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        sans-serif;
+
+    background-color: #f5f5f9;
+}
+
+.layout-container {
+    min-height: 100vh;
+    display: flex;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+/*
+   Slightly wider sidebar.
+   This shifts the dashboard/content area to the right.
+*/
+#layout-menu.layout-menu {
+    width: 235px !important;
+    min-width: 235px !important;
+
+    background-color: #ffffff !important;
+
+    box-shadow:
+        0 0.125rem 0.375rem
+        rgba(161, 172, 184, 0.12);
+
+    border-right: 1px solid #edf0f5;
+
+    z-index: 1000;
+}
+
+
+/* Sidebar inner content */
+#layout-menu .menu-inner {
+    padding: 8px 12px 24px !important;
+}
+
+
+/* =========================================================
+   LOGO AREA
+   ========================================================= */
+
+#layout-menu .app-brand {
+    height: 82px !important;
+
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+
+    margin-bottom: 12px !important;
+
+    display: flex;
+    align-items: center;
+
+    border-bottom: 1px solid #edf0f5;
+}
+
+
+/* Logo */
+#layout-menu .app-brand-logo img {
+    width: 42px !important;
+    height: 42px !important;
+
+    object-fit: contain;
+}
+
+
+/* EduHire text */
+#layout-menu .app-brand-text {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+
+    color: #5b5fe9 !important;
+
+    margin-left: 10px !important;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
+#layout-menu .menu-header {
+    margin-top: 12px !important;
+    margin-bottom: 6px !important;
+
+    padding:
+        12px
+        14px
+        8px !important;
+}
+
+#layout-menu .menu-header-text {
+    font-size: 12px !important;
+
+    font-weight: 600 !important;
+
+    letter-spacing: 0.8px;
+
+    color: #8a99ad !important;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   SIDEBAR MENU ITEMS
+   ========================================================= */
+
+#layout-menu .menu-item {
+    margin-bottom: 4px !important;
+}
+
+
+/* Main menu link */
+#layout-menu .menu-link {
+    min-height: 48px;
+
+    padding:
+        10px
+        14px !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    gap: 12px;
+
+    border-radius: 9px;
+
+    font-size: 14px !important;
+
+    font-weight: 500;
+
+    line-height: 1.2;
+
+    color: #506176 !important;
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+/* Hover */
+#layout-menu .menu-link:hover {
+    background-color: #f5f7fb !important;
+
+    color: #315f9f !important;
+}
+
+
+/* =========================================================
+   SIDEBAR ICONS
+   ========================================================= */
+
+#layout-menu .menu-icon {
+    width: 22px !important;
+    min-width: 22px !important;
+
+    height: 22px;
+
+    margin: 0 !important;
+
+    display: inline-flex !important;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px !important;
+
+    color: #60758f;
+
+    flex-shrink: 0;
+}
+
+
+/* Icon hover */
+#layout-menu .menu-link:hover .menu-icon {
+    color: #315f9f;
+}
+
+
+/* =========================================================
+   DROPDOWN MENUS
+   ========================================================= */
+
+#layout-menu .sidebar-dropdown > .menu-link {
+    width: 100%;
+
+    border: 0;
+
+    outline: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    text-align: left;
+}
+
+
+/* Text takes available space */
+#layout-menu .sidebar-dropdown
+> .menu-link
+> .flex-grow-1 {
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+/* =========================================================
+   DROPDOWN ARROWS
+   ========================================================= */
+
+#layout-menu .dropdown-arrow {
+    width: 18px !important;
+
+    min-width: 18px !important;
+
+    height: 18px;
+
+    margin-left: auto !important;
+
+    display: inline-flex !important;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 17px !important;
+
+    color: #74859a;
+
+    transition:
+        transform 0.2s ease;
+}
+
+
+/* Rotate arrow when opened */
+#layout-menu .dropdown-arrow.rotate {
+    transform: rotate(180deg);
+}
+
+
+/* Prevent unwanted arrow on LI */
+#layout-menu li.sidebar-dropdown::before,
+#layout-menu li.sidebar-dropdown::after {
+    display: none !important;
+}
+
+
+/* =========================================================
+   SUBMENU
+   ========================================================= */
+
+#layout-menu .menu-sub {
+    display: none;
+
+    margin: 2px 0 6px 0 !important;
+
+    padding:
+        3px
+        0
+        3px
+        38px !important;
+
+    list-style: none;
+}
+
+
+/* Open submenu */
+#layout-menu .menu-sub.open {
+    display: block;
+}
+
+
+/* Submenu item */
+#layout-menu .menu-sub .menu-item {
+    margin-bottom: 2px !important;
+}
+
+
+/* Submenu link */
+#layout-menu .menu-sub .menu-link {
+    min-height: 40px;
+
+    padding:
+        8px
+        12px !important;
+
+    border-radius: 7px;
+
+    font-size: 13px !important;
+
+    gap: 9px;
+}
+
+
+/* Submenu icon */
+#layout-menu .menu-sub .menu-icon {
+    width: 18px !important;
+
+    min-width: 18px !important;
+
+    font-size: 17px !important;
+}
+
+
+/* =========================================================
+   ACTIVE MENU
+   ========================================================= */
+
+#layout-menu .menu-item.active > .menu-link {
+    background-color: #eef3ff !important;
+
+    color: #315f9f !important;
+
+    font-weight: 600;
+}
+
+
+#layout-menu
+.menu-item.active
+> .menu-link
+.menu-icon {
+    color: #315f9f !important;
+}
+
+
+/* =========================================================
+   DASHBOARD CONTENT AREA
+   ========================================================= */
+
+/*
+   Sneat normally calculates this automatically.
+   These values ensure the content starts after
+   the wider 235px sidebar.
+*/
+
+.layout-page {
+    margin-left: 235px !important;
+
+    min-height: 100vh;
+
+    width: calc(100% - 235px);
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+/* 
+.layout-navbar {
+    background-color:
+        rgba(255, 255, 255, 0.95) !important;
+
+    backdrop-filter: blur(8px);
+
+    border-radius: 0.375rem;
+
+    margin-top: 0.75rem !important;
+
+    margin-right: 1.25rem !important;
+    margin-left: 1.25rem !important;
+
+    box-shadow:
+        0 0.125rem 0.375rem
+        rgba(161, 172, 184, 0.12);
+} */
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.content-wrapper {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+
+/*
+   Gives the dashboard cards and charts
+   a little more balanced spacing.
+*/
+.content-wrapper .card {
+    border: none;
+
+    box-shadow:
+        0 0.125rem 0.25rem
+        rgba(161, 172, 184, 0.15);
+
+    transition:
+        all 0.2s ease-in-out;
+}
+
+
+.content-wrapper .card:hover {
+    box-shadow:
+        0 0.25rem 0.75rem
+        rgba(161, 172, 184, 0.25);
+}
+
+
+/* =========================================================
+   DASHBOARD TITLE
+   ========================================================= */
+
+.content-wrapper h3,
+.content-wrapper h4 {
+    color: #506176;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+#layout-menu::-webkit-scrollbar {
+    width: 6px;
+}
+
+#layout-menu::-webkit-scrollbar-thumb {
+    background:
+        rgba(161, 172, 184, 0.20);
+
+    border-radius: 3px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1199px) {
+
+    #layout-menu.layout-menu {
+        width: 235px !important;
+        min-width: 235px !important;
+    }
+
+    .layout-page {
+        margin-left: 235px !important;
+
+        width: calc(100% - 235px);
+    }
+}
+
+
+@media (max-width: 991px) {
+
+    .layout-page {
+        margin-left: 0 !important;
+
+        width: 100%;
+    }
+
+    #layout-menu.layout-menu {
+        width: 260px !important;
+        min-width: 260px !important;
+    }
+
+}
+
+/* =========================================================
+   ADMIN NAVBAR - FIXED & ALIGNED
+   ========================================================= */
+
+.layout-page {
+    margin-left: 235px !important;
+    width: calc(100% - 235px);
+    min-height: 100vh;
+}
+
+
+/* Navbar container */
+.layout-navbar {
+    position: relative !important;
+
+    width: calc(100% - 3.25rem) !important;
+    max-width: calc(1440px - 3.25rem) !important;
+
+    min-height: 64px !important;
+
+    margin: 12px auto 0 auto !important;
+
+    padding: 0 18px !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    background: #ffffff !important;
+
+    border: 1px solid #edf0f5 !important;
+
+    border-radius: 8px !important;
+
+    box-shadow:
+        0 2px 6px
+        rgba(161, 172, 184, 0.12) !important;
+
+    backdrop-filter: none !important;
+
+    z-index: 900;
+}
+
+
+/* Navbar inner content */
+.layout-navbar .navbar-container {
+    width: 100% !important;
+
+    min-height: 64px;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: space-between !important;
+}
+
+
+/* =========================================================
+   NAVBAR LEFT SIDE
+   ========================================================= */
+
+.layout-navbar .navbar-nav-left {
+    display: flex !important;
+
+    align-items: center !important;
+
+    height: 100%;
+}
+
+
+/* Menu toggle */
+.layout-navbar .layout-menu-toggle {
+    width: 40px !important;
+    height: 40px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    border-radius: 8px;
+
+    color: #697a8d !important;
+
+    transition: background-color 0.2s ease;
+}
+
+
+.layout-navbar .layout-menu-toggle:hover {
+    background-color: #f5f7fb !important;
+}
+
+
+/* =========================================================
+   NAVBAR RIGHT SIDE
+   ========================================================= */
+
+.layout-navbar .navbar-nav-right {
+    margin-left: auto !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    height: 100%;
+}
+
+
+/* Right side list */
+.layout-navbar .navbar-nav {
+    display: flex !important;
+
+    align-items: center !important;
+
+    gap: 8px;
+}
+
+
+/* =========================================================
+   NOTIFICATION BUTTON
+   ========================================================= */
+
+.layout-navbar .nav-item .nav-link {
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 0 !important;
+
+    border-radius: 8px;
+
+    color: #697a8d !important;
+}
+
+
+.layout-navbar .nav-item .nav-link:hover {
+    background-color: #f5f7fb !important;
+}
+
+
+/* Notification icon */
+.layout-navbar .bx-bell {
+    font-size: 21px !important;
+
+    color: #697a8d;
+}
+
+
+/* =========================================================
+   NOTIFICATION BADGE
+   ========================================================= */
+
+.layout-navbar .badge-notifications {
+    top: 2px !important;
+
+    right: 1px !important;
+
+    min-width: 18px;
+    height: 18px;
+
+    padding: 0 !important;
+
+    display: flex !important;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 10px !important;
+
+    font-weight: 600;
+
+    border-radius: 50%;
+
+    background-color: #ff3e1d !important;
+}
+
+
+/* =========================================================
+   PROFILE
+   ========================================================= */
+
+.layout-navbar .avatar {
+    width: 40px !important;
+    height: 40px !important;
+
+    margin-left: 4px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+}
+
+
+.layout-navbar .avatar img {
+    width: 40px !important;
+    height: 40px !important;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+
+/* Profile dropdown */
+.layout-navbar .dropdown-menu {
+    margin-top: 8px !important;
+
+    border: none !important;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 6px 20px
+        rgba(67, 89, 113, 0.15);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   NAVBAR HEIGHT / CONTENT ALIGNMENT
+   ========================================================= */
+
+.layout-navbar + .content-wrapper {
+    padding-top: 8px !important;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 1199px) {
+
+    .layout-page {
+        margin-left: 235px !important;
+
+        width: calc(100% - 235px);
+    }
+
+    .layout-navbar {
+        width: calc(100% - 30px) !important;
+
+        margin-left: 15px !important;
+        margin-right: 15px !important;
+    }
+}
+
+
+@media (max-width: 991px) {
+
+    .layout-page {
+        margin-left: 0 !important;
+
+        width: 100%;
+    }
+
+    .layout-navbar {
+        width: calc(100% - 24px) !important;
+
+        margin: 12px !important;
+    }
+}
